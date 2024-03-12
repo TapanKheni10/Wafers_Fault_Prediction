@@ -64,7 +64,7 @@ class DataTransformation:
         logger.info("done with class imbalance")
 
         logger.info("train_test_split started....")
-        X_train, y_train, X_test, y_test = train_test_split(X_res, y_res, test_size=0.2, random_state=42)
+        X_train, X_test, y_train, y_test = train_test_split(X_res, y_res, test_size=0.2, random_state=42)
         y_train = np.where(y_train==-1, 0, 1)
         y_test = np.where(y_test==-1, 0, 1)
 

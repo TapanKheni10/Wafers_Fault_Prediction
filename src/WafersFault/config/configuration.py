@@ -53,4 +53,36 @@ class ConfigurationManager:
             preprocessor_name=config.preprocessor_name
         )
 
-        return data_transformation_config 
+        return data_transformation_config
+
+    def get_model_trainer_config(self) -> config_entity.ModelTrainerConfig:
+        config = self.config.model_trainer
+        params = self.params.RandomForestClassifier
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = config_entity.ModelTrainerConfig(
+            root_dir=config.root_dir,
+            x_train_data_path=config.x_train_data_path,
+            y_train_data_path=config.y_train_data_path,
+            model_name=config.model_name,
+            params=params,
+        )
+    
+        return model_trainer_config 
+    
+    def get_model_evaluation_config(self) ->config_entity. ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        params = self.params.RandomForestClassifier
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = config_entity.ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            x_test_data_path=config.x_test_data_path,
+            y_test_data_path=config.y_test_data_path,
+            model_path=config.model_path,
+            metrics_name=config.metrics_name
+        )
+
+        return model_evaluation_config
