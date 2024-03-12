@@ -1,9 +1,11 @@
-dnspython==2.2.1
+dnspython
 database-connect==0.1.66
 streamlit
+catboost
 pandas
 notebook
 numpy
+seaborn
 imblearn
 scikit-learn
 matplotlib
@@ -19,7 +21,7 @@ python-dotenv
 ipykernel
 jinja2==3.1.2
 mypy-boto3-s3==1.24.76
-pymongo==4.2.0
+pymongo==3.8
 python-dotenv==0.21.0
 python-multipart==0.0.6
 xgboost==1.6.2

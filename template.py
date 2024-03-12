@@ -26,7 +26,7 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "research/trails.py",
-    "templates/index.html"
+    "pages"
 ]
 
 for filepath in list_of_files:
