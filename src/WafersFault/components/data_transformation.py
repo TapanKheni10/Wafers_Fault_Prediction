@@ -9,6 +9,7 @@ from sklearn.impute import KNNImputer, SimpleImputer
 from sklearn.preprocessing import RobustScaler
 from imblearn.combine import SMOTETomek
 from sklearn.model_selection import train_test_split
+import joblib
 
 class DataTransformation:
     def __init__(self, config: config_entity.DataTransformationConfig) -> None:
@@ -75,3 +76,5 @@ class DataTransformation:
         np.save(os.path.join(self.config.root_dir, "X_test.npy"), X_test)
         np.save(os.path.join(self.config.root_dir, "y_train.npy"), y_train)
         np.save(os.path.join(self.config.root_dir, "y_test.npy"), y_test)
+
+        joblib.dump(preprocessor_pipeline, os.path.join(self.config.root_dir, self.config.preprocessor_name))

@@ -50,6 +50,7 @@ class ConfigurationManager:
             root_dir=config.root_dir,
             data_path=config.data_path,
             cols_to_drop=list(drop_schema.keys()),
+            preprocessor_name=config.preprocessor_name
         )
 
         return data_transformation_config 

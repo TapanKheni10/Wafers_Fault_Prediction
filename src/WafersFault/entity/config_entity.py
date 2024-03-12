@@ -18,3 +18,4 @@ class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     cols_to_drop: list
+    preprocessor_name: str
