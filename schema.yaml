@@ -589,7 +589,8 @@ COLUMNS:
   Sensor-588: float64
   Sensor-589: float64
   Sensor-590: float64
-  
+  Good/Bad: int64
+ 
 TARGET_COLUMN:
   name: Good/Bad
 
