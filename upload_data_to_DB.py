@@ -3,9 +3,6 @@ import pandas as pd
 import json
 import urllib.parse
 
-# password = "tapankheni"
-# username = "tapankheni"
-
 # encoded_password = urllib.parse.quote_plus(password)
 # encoded_username = urllib.parse.quote_plus(username)
 

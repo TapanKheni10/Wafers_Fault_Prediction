@@ -57,7 +57,7 @@ class ConfigurationManager:
 
     def get_model_trainer_config(self) -> config_entity.ModelTrainerConfig:
         config = self.config.model_trainer
-        params = self.params.RandomForestClassifier
+        params = self.params
 
         create_directories([config.root_dir])
 
@@ -73,7 +73,6 @@ class ConfigurationManager:
     
     def get_model_evaluation_config(self) ->config_entity. ModelEvaluationConfig:
         config = self.config.model_evaluation
-        params = self.params.RandomForestClassifier
 
         create_directories([config.root_dir])
 
